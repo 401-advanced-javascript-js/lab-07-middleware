@@ -1,0 +1,20 @@
+{
+  "name": "lab-07-middleware",
+  "version": "1.0.0",
+  "description": "middleware for server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint **/*.js",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "express": "^4.16.4",
+    "jest": "^24.8.0"
+  }
+}
