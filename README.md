@@ -5,37 +5,50 @@
 ### Author: Jagdeep Singh and Jesse Van Volkinburg
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-<!-- * [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable) -->
+
+* [submission PR](https://github.com/401-advanced-javascript-js/lab-07-middleware/pull/2)
+* [travis](https://www.travis-ci.com/401-advanced-javascript-js/lab-07-middleware)
 
 #### Documentation
-* [api docs](http://xyz.com) (API servers)
-* [jsdoc](http://xyz.com) (Server assignments)
-* [styleguide](http://xyz.com) (React assignments)
+* 
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### `addReqTime.js`
+###### `addReqTime(req, res, next)`
+- Middleware to add timestamp to request
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `errorHandler.js`
+###### `errorHandler(err, req, res, next)`
+- Error handler middleware which server console logs error message and also sends the error and status to the front end.
 
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `logger.js`
+###### `logger(req, res, next)`
+- Logger middleware which server console logs the request method, path, and request timestamp.
+
+#### `notFound.js`
+###### `notFound(req, res, next)`
+- 404 error handler middleware that sends a 404 and message to the front end.
+
+#### `squareNum.js`
+###### `squareNum(req, res, next)`
+- Middleware that takes in `req.params.number`, squares it, and adds the number to the request.
 
 ### Setup
 #### `.env` requirements
 * `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
 
 #### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+* `nodemon`
+* Endpoint: `/a`
+  * Returns 'Route A' to the front end via res.send()
+* Endpoint: `/b`
+  * Returns 'Route B' to the front end via res.send()
+* Endpoint: `/b/:number`
+  * Returns the square of `number` to the front end via res.send()
+* Endpoint: `/c`
+  * Returns 'Route C' to the front end via res.send()
+* Endpoint: `/d`
+  * Returns an error to the front end, status code 500
   
 #### Tests
 * How do you run tests?
