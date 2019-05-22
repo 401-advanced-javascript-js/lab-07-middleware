@@ -8,8 +8,8 @@ const routes = require('./lib/routes.js');
 const logger = require('./lib/middleware/logger.js');
 const notFound = require('./lib/middleware/notFound.js');
 const errorHandler = require('./lib/middleware/errorHandler.js');
-const addReqTime = require('./lib/middleware/addReqTime.js')
-const squareNum = require('./middleware/squareNum.js');
+const addReqTime = require('./lib/middleware/addReqTime.js');
+const squareNum = require('./lib/middleware/squareNum.js');
 
 app.use(addReqTime);
 app.use(logger);
@@ -26,9 +26,9 @@ app.get('/b/:number', squareNum, (req,res) => {
   res.status(200).send(req.number);
 });
 
-app.use('*', notFound);
-
 app.use('/', routes);
+
+app.use('*', notFound);
 
 app.use(errorHandler);
 
