@@ -23,7 +23,7 @@ app.get('/b', (req,res) => {
 });
 
 app.get('/b/:number', squareNum, (req,res) => {
-  res.status(200).send(req.number);
+  res.status(200).send(String(req.number));
 });
 
 app.use('/', routes);
