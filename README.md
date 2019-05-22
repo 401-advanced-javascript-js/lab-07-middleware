@@ -5,10 +5,8 @@
 ### Author: Jagdeep Singh and Jesse Van Volkinburg
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/401-advanced-javascript-js/lab-07-middleware/pull/2)
+* [travis](https://www.travis-ci.com/401-advanced-javascript-js/lab-07-middleware)
 
 #### Documentation
 * [api docs](http://xyz.com) (API servers)
